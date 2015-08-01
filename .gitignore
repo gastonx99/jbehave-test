@@ -1,12 +1,45 @@
-*.class
+#################
+## Maven
+#################
+target/
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+#################
+## Gradle
+#################
+build/
+.gradle/
+gradle/
+gradlew.bat
+gradlew
+settings.gradle
 
-# Package Files #
-*.jar
-*.war
-*.ear
+#################
+## Eclipse
+#################
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+#*.launch
+
+#################
+## Others
+#################
+*.log
+.*.html
+Oracle
+# For liquibase generated db doc
+dbDoc

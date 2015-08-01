@@ -1,0 +1,22 @@
+=== Context
+Finns stöd för Context, så att man i en stepinstans kan få ut vilket scenario som körs? 
+Detta för att t.ex. bara ange persorgnr i ett steg istället för i alla steg.
+
+Samma fråga, men inte riktigt klart än vad svaret innebär
+http://stackoverflow.com/questions/9389845/jbehave-maintain-data-across-steps-given-when-then-during-a-scenario
+
+Lösning med ThreadLocal och Before/AfterScenario annotations?
+
+=== Running tests in parallell
+Ja, per story. Kan vara good enuff om en story innehåller scenarios för samma unika identifierare, 
+t.ex. persorgnr och ny ansökan->komplettering->ändring->avslut
+http://jbehave.org/reference/stable/multi-threading.html
+
+=== Hantering av asynkrona flöden
+Förslag:
+When "ansokan skickas in"
+And "efter att all aktivitet har avstannat"
+And-steget kan då kicka igång och lyssna på activitytracker och bli notifierad när all aktivitet har avstannat.
+
+
+
