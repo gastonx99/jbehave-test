@@ -24,7 +24,7 @@ public class NyAnsokanSteps {
 
     @When("ansokan skickas in")
     public void whenAnsokanSkickasIn() {
-        LOGGER.info("whenAnsokanSkickasIn");
+        LOGGER.info("whenAnsokanSkickasIn, for persorgnr " + StoryContext.get().get("persorgnr"));
     }
 
     @Then("antal arkiveringar = $antal")

@@ -23,6 +23,12 @@ public class StoryContext {
     }
 
     public void add(String key, Object value) {
+        if (map.containsKey(key)) {
+            String message = "Key " + key + " already exists. "
+                    + "Multithreading problem, i.e. is the story context not cleared after thread completion? "
+                    + "Or should value be added to a list instead?";
+            throw new IllegalArgumentException(message);
+        }
         map.put(key, value);
     }
 
